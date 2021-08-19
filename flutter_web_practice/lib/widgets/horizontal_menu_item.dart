@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_practice/constants/controllers.dart';
 import 'package:get/get.dart';
-import 'package:flutter_web_practice/constants/style.dart';
 import 'custom_text.dart';
 
 class HorizontalMenuItem extends StatelessWidget {
@@ -24,22 +23,22 @@ class HorizontalMenuItem extends StatelessWidget {
         },
         child: Obx(() => Container(
               color: menuController.isHovering(itemName)
-                  ? lightGrey.withOpacity(.1)
+                  ? Colors.white.withOpacity(.1)
                   : Colors.transparent,
               child: Row(
                 children: [
-                  Visibility(
-                    visible: menuController.isHovering(itemName) ||
-                        menuController.isActive(itemName),
-                    maintainSize: true,
-                    maintainAnimation: true,
-                    maintainState: true,
-                    child: Container(
-                      width: 6,
-                      height: 40,
-                      color: dark,
-                    ),
-                  ),
+                  // Visibility(
+                  //   visible: menuController.isHovering(itemName) ||
+                  //       menuController.isActive(itemName),
+                  //   maintainSize: true,
+                  //   maintainAnimation: true,
+                  //   maintainState: true,
+                  //   child: Container(
+                  //     width: 6,
+                  //     height: 40,
+                  //     color: dark,
+                  //   ),
+                  // ),
                   SizedBox(width: _width / 88),
                   Padding(
                     padding: const EdgeInsets.all(16),
@@ -49,15 +48,16 @@ class HorizontalMenuItem extends StatelessWidget {
                     Flexible(
                         child: CustomText(
                       text: itemName,
-                      color: menuController.isHovering(itemName)
-                          ? dark
-                          : lightGrey,
+                      // color: menuController.isHovering(itemName)
+                      //     ? dark
+                      //     : Colors.white,
+                      color: Colors.white,
                     ))
                   else
                     Flexible(
                         child: CustomText(
                       text: itemName,
-                      color: dark,
+                      color: Colors.white,
                       size: 18,
                       weight: FontWeight.bold,
                     ))

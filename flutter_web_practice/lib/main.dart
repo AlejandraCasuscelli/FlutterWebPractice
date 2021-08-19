@@ -18,7 +18,7 @@ class WebApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Inicio",
+      title: "Me.Up Backend",
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.mulishTextTheme(

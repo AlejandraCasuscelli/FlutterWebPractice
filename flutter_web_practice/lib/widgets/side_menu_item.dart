@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_practice/helpers/responsiveness.dart';
 import 'package:flutter_web_practice/widgets/horizontal_menu_item.dart';
+import 'package:flutter_web_practice/widgets/vertical_menu_item.dart';
 // import 'package:flutter_web_practice/widgets/vertical_menu_item.dart';
 
 
@@ -13,9 +14,9 @@ class SideMenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if(ResponsiveWidget.isCustomSize(context)){
-      return HorizontalMenuItem(itemName: itemName, onTap: onTap,); //Vertical
+      return VertticalMenuItem(itemName: itemName, onTap: onTap,); //VertticalMenuItem
     }else{
-      return HorizontalMenuItem(itemName: itemName, onTap: onTap,);
+      return HorizontalMenuItem(itemName: itemName, onTap: onTap,);//HorizontalMenuItem
     }
   }
 }

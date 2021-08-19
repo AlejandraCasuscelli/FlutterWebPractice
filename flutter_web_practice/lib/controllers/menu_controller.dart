@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_practice/routing/routes.dart';
-import 'package:flutter_web_practice/constants/style.dart';
 import 'package:get/get.dart';
 
 class MenuController extends GetxController {
@@ -37,11 +36,12 @@ class MenuController extends GetxController {
   }
 
   Widget _customIcon(IconData icon, String itemName) {
-    if (isActive(itemName)) return Icon(icon, size: 22, color: dark);
-
+    if (isActive(itemName)) return Icon(icon, size: 22, color: Colors.white);
+    // if (isActive(itemName)) return Icon(icon, size: 22, color: dark);
     return Icon(
       icon,
-      color: isHovering(itemName) ? dark : lightGrey,
+      // color: isHovering(itemName) ? dark : lightGrey,
+      color: Colors.white,
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_practice/constants/style.dart';
+import 'side_menu.dart';
 
 class LargeScreen extends StatelessWidget {
   const LargeScreen({ Key? key }) : super(key: key);
@@ -7,16 +7,17 @@ class LargeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: [
-          Expanded(child: Container(
-            color: light,
-          )),
-          Expanded(
-            flex: 5,
-            child: Container(
-            color: Colors.blue,
-          ))
-        ],
-      );
+        crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                  child: SideMenu()),
+              Expanded(
+                  flex: 5,
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    // child: localNavigator(),
+                  ))
+            ],
+          );
   }
 }
