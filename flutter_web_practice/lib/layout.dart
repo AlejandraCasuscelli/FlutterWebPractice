@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'helpers/local_navigator.dart';
 import 'helpers/responsiveness.dart';
 import 'widgets/large_screen.dart';
 import 'widgets/side_menu.dart';
@@ -19,7 +20,7 @@ class SiteLayout extends StatelessWidget {
         largeScreen: LargeScreen(),
         smallScreen: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          // child: localNavigator(),
+          child: localNavigator(),
         ),
       ),
     );
