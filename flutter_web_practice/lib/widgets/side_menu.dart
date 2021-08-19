@@ -50,8 +50,8 @@ class SideMenu extends StatelessWidget {
                           onTap: () {
                             print(item.name);
                             if(item.route == loginPageRoute){
-                              // Get.offAllNamed(loginPageRoute);
-                              // menuController.changeActiveItemTo(tipsPageDisplayName);
+                              Get.offAllNamed(loginPageRoute);
+                              menuController.changeActiveItemTo(tipsPageDisplayName);
                             }
                             if (!menuController.isActive(item.name)) {
                               menuController.changeActiveItemTo(item.name);
