@@ -9,11 +9,8 @@ Route<dynamic> generateRoute(RouteSettings settings){
       return _getPageRoute(TipsPage());
     case preguntasHabitosPageRoute:
       return _getPageRoute(PreguntasHabitosPage());
-    // case clientsPageRoute:
-    //   return _getPageRoute(ClientsPage());
     default:
       return _getPageRoute(TipsPage());
-
   }
 }
 

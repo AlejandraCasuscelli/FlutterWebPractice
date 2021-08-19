@@ -26,8 +26,6 @@ class MenuController extends GetxController {
         return _customIcon(Icons.trending_up, itemName);
       case preguntasHabitosPageDisplayName:
         return _customIcon(Icons.drive_eta, itemName);
-      // case clientsPageDisplayName:
-      //   return _customIcon(Icons.people_alt_outlined, itemName);
       case loginPageDisplayName:
         return _customIcon(Icons.exit_to_app, itemName);
       default:
