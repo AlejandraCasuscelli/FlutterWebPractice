@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
-  var activeItem = overviewPageDisplayName.obs;
+  var activeItem = tipsPageDisplayName.obs;
 
   var hoverItem = "".obs;
 
@@ -22,13 +22,13 @@ class MenuController extends GetxController {
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
-      case overviewPageDisplayName:
+      case tipsPageDisplayName:
         return _customIcon(Icons.trending_up, itemName);
-      case driversPageDisplayName:
+      case preguntasHabitosPageDisplayName:
         return _customIcon(Icons.drive_eta, itemName);
-      case clientsPageDisplayName:
-        return _customIcon(Icons.people_alt_outlined, itemName);
-      case authenticationPageDisplayName:
+      // case clientsPageDisplayName:
+      //   return _customIcon(Icons.people_alt_outlined, itemName);
+      case loginPageDisplayName:
         return _customIcon(Icons.exit_to_app, itemName);
       default:
         return _customIcon(Icons.exit_to_app, itemName);

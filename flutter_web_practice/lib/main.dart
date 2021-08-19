@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_practice/controllers/navigation_controller.dart';
 import 'controllers/menu_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,6 +9,7 @@ import 'layout.dart';
 
 void main() {
   Get.put(MenuController());
+  Get.put(NavigationController());
   runApp(WebApp());
 }
 
