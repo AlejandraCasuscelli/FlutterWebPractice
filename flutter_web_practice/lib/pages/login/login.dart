@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_practice/constants/firebase.dart';
 import 'package:flutter_web_practice/constants/style.dart';
 import 'package:flutter_web_practice/routing/routes.dart';
 import 'package:flutter_web_practice/widgets/custom_text.dart';
@@ -92,7 +94,8 @@ class LoginPage extends StatelessWidget {
               ),
               InkWell(
                 onTap: (){
-                  Get.offAllNamed(rootRoute);
+                  _signInWithEmailAndPassword();
+                  // Get.offAllNamed(rootRoute);
                 },
                 child: Container(
                   decoration: BoxDecoration(color: active, 
@@ -124,4 +127,33 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
+}
+
+
+void _signInWithEmailAndPassword() async {
+
+try {
+
+  final User? user = (await auth.signInWithEmailAndPassword(
+    email: "pepeelgrillo@globons.com",
+    password: "alegria",
+  )).user;
+  
+  if (user != null) {
+    print("existeeeee");
+    // setState(() {
+    //   _success = true;
+    //   _userEmail = user.email;
+    // });
+  } else {
+    print("fail");
+    // setState(() {
+    //   _success = false;
+    // });
+  }
+  } on FirebaseAuthException catch  (e) {
+  print('Failed with error code: ${e.code}');
+  print(e.message);
+  print(e);
+}
 }

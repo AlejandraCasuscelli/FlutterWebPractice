@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_practice/controllers/navigation_controller.dart';
 import 'package:flutter_web_practice/pages/login/login.dart';
 import 'package:flutter_web_practice/routing/routes.dart';
-import 'constants/style.dart';
 import 'controllers/menu_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
