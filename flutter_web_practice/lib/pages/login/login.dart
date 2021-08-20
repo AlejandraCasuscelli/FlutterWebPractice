@@ -28,9 +28,6 @@ class LoginPage extends StatelessWidget {
                   Expanded(child: Container()),
                 ],
               ),
-              SizedBox(
-                height: 30,
-              ),
               Row(
                 children: [
                   Text("Login",
@@ -44,7 +41,7 @@ class LoginPage extends StatelessWidget {
               Row(
                 children: [
                   CustomText(
-                    text: "Welcome back to the admin panel.",
+                    text: "Me.Up backend admin panel.",
                     color: lightGrey,
                   ),
                 ],
@@ -57,7 +54,7 @@ class LoginPage extends StatelessWidget {
                     labelText: "Email",
                     hintText: "abc@domain.com",
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20))),
+                        borderRadius: BorderRadius.circular(20)))
               ),
               SizedBox(
                 height: 15,
@@ -71,25 +68,6 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20))),
               ),
                SizedBox(
-                height: 15,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Checkbox(value: true, onChanged: (value){}),
-                      CustomText(text: "Remeber Me",),
-                    ],
-                  ),
-
-                  CustomText(
-                    text: "Forgot password?",
-                    color: active
-                  )
-                ],
-              ),
-                SizedBox(
                 height: 15,
               ),
               InkWell(
@@ -113,14 +91,6 @@ class LoginPage extends StatelessWidget {
                SizedBox(
                 height: 15,
               ),
-
-              RichText(text: TextSpan(
-                children: [
-                  TextSpan(text: "Do not have admin credentials? "),
-                  TextSpan(text: "Request Credentials! ", style: TextStyle(color: active))
-                ]
-              ))
-
             ],
           ),
         ),
@@ -141,6 +111,7 @@ try {
   
   if (user != null) {
     print("existeeeee");
+    Get.offAllNamed(rootRoute);
     // setState(() {
     //   _success = true;
     //   _userEmail = user.email;

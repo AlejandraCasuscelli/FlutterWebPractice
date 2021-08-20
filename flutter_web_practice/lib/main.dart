@@ -30,7 +30,7 @@ class WebApp extends StatelessWidget {
         GetPage(name: loginPageRoute, page: () => LoginPage()),
       ],
       debugShowCheckedModeBanner: false,
-      title: 'Dashboard',
+      title: 'Me.Up Backend',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme).apply(
